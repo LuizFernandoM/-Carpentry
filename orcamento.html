@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simulação de orçamento — Paulo Móveis</title>
+  <meta name="description" content="Informe o tipo de móvel, o acabamento e as medidas para receber uma estimativa inicial. O valor final é confirmado pela marcenaria.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Paulo Móveis — página inicial">
+      <svg class="brand__mark" viewBox="0 0 46 46" aria-hidden="true">
+        <rect width="46" height="46" rx="2" fill="#24251F"/>
+        <path d="M11 34 V12 L23 23 L35 12 V34" fill="none" stroke="#D4B18A" stroke-width="2.5"/>
+      </svg>
+      <span>
+        <span class="brand__name">PAULO MÓVEIS</span>
+        <span class="brand__tag">Marcenaria sob medida</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+      <svg width="28" height="22" viewBox="0 0 28 22" aria-hidden="true">
+        <path d="M2 4 H26 M2 11 H26 M2 18 H26" stroke="currentColor" stroke-width="2"/>
+      </svg>
+    </button>
+
+    <nav class="nav" id="menu" aria-label="Principal">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="index.html">Início</a></li>
+        <li><a class="nav__link" href="index.html#projetos">Projetos</a></li>
+        <li><a class="nav__link" href="index.html#sobre">Sobre nós</a></li>
+        <li><a class="nav__link" href="orcamento.html" aria-current="page">Orçamento</a></li>
+      </ul>
+      <a class="btn btn--dark nav__cta" href="index.html#orcamento">Fale conosco ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero" aria-labelledby="page-title">
+    <div class="wrap">
+      <p class="eyebrow eyebrow--light">Simulação de orçamento</p>
+      <h1 class="page-hero__title" id="page-title">Vamos planejar seu móvel.</h1>
+      <p class="page-hero__lead">Informe alguns detalhes para receber uma estimativa inicial.</p>
+      <p class="page-hero__note">O valor não substitui o orçamento definitivo feito pela marcenaria.</p>
+    </div>
+  </section>
+
+  <section class="calc" aria-label="Calculadora de orçamento">
+    <div class="wrap calc__grid">
+
+      <form class="panel" id="calc-form" novalidate aria-labelledby="form-title">
+        <p class="eyebrow">01 / Detalhes do projeto</p>
+        <h2 class="h3 panel__title" id="form-title" style="font-size:1.875rem">Conte o que você imagina</h2>
+
+        <div class="form">
+          <div class="field">
+            <label class="field__label" for="tipo">Tipo de móvel</label>
+            <select class="select" id="tipo" name="tipo" aria-describedby="tipo-erro">
+              <option value="">Selecione o tipo de móvel</option>
+              <option value="cozinha">Cozinha</option>
+              <option value="painel">Painel de TV e sala</option>
+              <option value="guarda-roupa">Guarda-roupa</option>
+              <option value="closet">Closet</option>
+              <option value="escritorio">Escritório</option>
+            </select>
+            <p class="field__error" id="tipo-erro" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="material">Material ou acabamento</label>
+            <select class="select" id="material" name="material">
+              <option value="">Selecione uma opção</option>
+              <option value="mdf-liso">MDF em cor lisa</option>
+              <option value="mdf-amadeirado">MDF amadeirado</option>
+              <option value="macica">Madeira maciça</option>
+            </select>
+          </div>
+
+          <fieldset class="form__pair-group" style="border:0;padding:0;margin:0;min-width:0">
+            <legend class="field__label" style="padding:0">Medidas aproximadas (metros)</legend>
+            <div class="form__pair">
+              <div class="field">
+                <label class="field__sub" for="largura">Largura</label>
+                <input class="input" id="largura" name="largura" type="text" inputmode="decimal" autocomplete="off" placeholder="Ex.: 2,00" aria-describedby="largura-erro">
+                <p class="field__error" id="largura-erro" role="alert"></p>
+              </div>
+              <div class="field">
+                <label class="field__sub" for="altura">Altura</label>
+                <input class="input" id="altura" name="altura" type="text" inputmode="decimal" autocomplete="off" placeholder="Ex.: 2,40" aria-describedby="altura-erro">
+                <p class="field__error" id="altura-erro" role="alert"></p>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="field">
+            <label class="field__label" for="obs">Observações (opcional)</label>
+            <textarea class="textarea" id="obs" name="obs" rows="3" placeholder="Conte um pouco sobre o projeto..."></textarea>
+          </div>
+        </div>
+      </form>
+
+      <div class="aside">
+        <section class="panel panel--sand estimate" aria-labelledby="est-title">
+          <p class="eyebrow">02 / Estimativa</p>
+          <h2 class="h3 panel__title" id="est-title" style="font-size:1.75rem">Seu orçamento inicial</h2>
+          <p class="estimate__lead">Preencha os detalhes ao lado para visualizar uma faixa estimada de valor.</p>
+          <div class="estimate__value">
+            <p class="estimate__label">Valor estimado</p>
+            <p class="estimate__amount" id="valor" aria-live="polite">R$ ———</p>
+          </div>
+          <p class="estimate__msg" id="valor-msg" aria-live="polite"></p>
+        </section>
+
+        <section class="notice" aria-labelledby="aviso-title">
+          <h2 class="notice__title" id="aviso-title">Importante saber</h2>
+          <p>Esta ferramenta oferece apenas uma referência. Medidas, materiais, ferragens e instalação influenciam o preço final.</p>
+        </section>
+
+        <a class="btn btn--dark aside__cta" id="solicitar" href="https://wa.me/" target="_blank" rel="noopener">Solicitar orçamento ↗</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="footer__bottom" style="border:0;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between">
+      <span><strong style="color:#fff">PAULO MÓVEIS</strong><br>Fortaleza dos Valos • Rio Grande do Sul</span>
+      <span>© 2026 • Portfólio digital</span>
+    </p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

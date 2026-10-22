@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paulo Móveis — Marcenaria sob medida</title>
+  <meta name="description" content="Móveis sob medida que combinam funcionalidade, durabilidade e a personalidade de cada ambiente. Marcenaria em Fortaleza dos Valos, RS.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Textura de veio da madeira, reutilizada pelas ilustrações -->
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <defs>
+    <pattern id="grain" width="90" height="90" patternUnits="userSpaceOnUse">
+      <path d="M0 18 C20 10 45 26 90 14 M0 47 C24 35 54 57 90 42 M0 76 C25 68 53 84 90 72" fill="none" stroke="#FFFFFF" stroke-opacity=".10" stroke-width="2"/>
+    </pattern>
+  </defs>
+</svg>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Paulo Móveis — página inicial">
+      <svg class="brand__mark" viewBox="0 0 46 46" aria-hidden="true">
+        <rect width="46" height="46" rx="2" fill="#24251F"/>
+        <path d="M11 34 V12 L23 23 L35 12 V34" fill="none" stroke="#D4B18A" stroke-width="2.5"/>
+      </svg>
+      <span>
+        <span class="brand__name">PAULO MÓVEIS</span>
+        <span class="brand__tag">Marcenaria sob medida</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+      <svg width="28" height="22" viewBox="0 0 28 22" aria-hidden="true">
+        <path d="M2 4 H26 M2 11 H26 M2 18 H26" stroke="currentColor" stroke-width="2"/>
+      </svg>
+    </button>
+
+    <nav class="nav" id="menu" aria-label="Principal">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="index.html" aria-current="page">Início</a></li>
+        <li><a class="nav__link" href="#projetos">Projetos</a></li>
+        <li><a class="nav__link" href="#sobre">Sobre nós</a></li>
+        <li><a class="nav__link" href="orcamento.html">Orçamento</a></li>
+      </ul>
+      <a class="btn btn--dark nav__cta" href="#orcamento">Fale conosco ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow eyebrow--light">Feito à mão. Feito para você.</p>
+          <h1 class="h1" id="hero-title" style="margin-top:26px">
+            <span style="display:block">A madeira certa.</span>
+            <span style="display:block">O espaço perfeito.</span>
+          </h1>
+          <span class="hero__bar" aria-hidden="true"></span>
+          <p class="hero__lead">Móveis sob medida que combinam funcionalidade, durabilidade e a personalidade de cada ambiente.</p>
+          <div class="hero__actions">
+            <a class="btn btn--wood btn--lg" href="#projetos">Ver projetos ↗</a>
+            <a class="hero__more" href="#sobre">Conheça nosso trabalho</a>
+          </div>
+        </div>
+
+        <!-- Ilustração estilizada de marcenaria -->
+        <svg class="hero__art" viewBox="0 0 530 612" role="img" aria-label="Ilustração de armário sob medida em madeira clara e escura">
+          <rect x="38" y="20" width="490" height="440" fill="#171813" opacity=".35"/>
+          <rect width="490" height="440" fill="#D7C4AB"/>
+          <rect x="18" y="18" width="454" height="404" fill="#B7A48B"/>
+          <rect x="30" y="30" width="205" height="392" fill="#E7DCCB"/>
+          <rect x="246" y="30" width="216" height="392" fill="#A77950"/>
+          <rect x="246" y="30" width="216" height="392" fill="url(#grain)"/>
+          <path d="M264 30 V422 M286 30 V422 M308 30 V422 M330 30 V422 M352 30 V422 M374 30 V422 M396 30 V422 M418 30 V422 M440 30 V422" stroke="#4F3727" stroke-opacity=".25" stroke-width="2"/>
+          <rect x="30" y="30" width="205" height="110" fill="#C4B59F"/>
+          <rect x="30" y="150" width="205" height="122" fill="#D4C5B0"/>
+          <rect x="30" y="282" width="205" height="140" fill="#B9A58B"/>
+          <path d="M46 84 H220 M46 210 H220 M46 352 H220" stroke="#8D7C67" stroke-width="2"/>
+          <rect y="423" width="490" height="17" fill="#72533C"/>
+          <rect x="20" y="440" width="450" height="10" fill="#171813" opacity=".55"/>
+          <rect x="60" y="455" width="365" height="16" fill="#24251F"/>
+          <rect x="80" y="471" width="325" height="28" fill="#151611"/>
+          <rect x="75" y="499" width="340" height="9" fill="#C99A6B"/>
+          <rect x="75" y="508" width="340" height="8" fill="#5E402C"/>
+          <rect x="68" y="516" width="355" height="20" fill="#24251F"/>
+          <rect x="80" y="536" width="330" height="12" fill="#151611"/>
+          <rect x="98" y="548" width="294" height="12" fill="#C99A6B"/>
+          <rect x="98" y="560" width="294" height="8" fill="#5E402C"/>
+          <rect x="125" y="568" width="240" height="22" fill="#24251F"/>
+          <rect x="144" y="590" width="200" height="10" fill="#151611"/>
+        </svg>
+      </div>
+      <p class="hero__place">Paulo Móveis • Fortaleza dos Valos / RS</p>
+    </div>
+  </section>
+
+  <section class="section" id="sobre" aria-labelledby="sobre-title">
+    <div class="wrap intro">
+      <div>
+        <p class="eyebrow">Nosso trabalho</p>
+        <h2 class="h2 intro__title" id="sobre-title">Detalhes que fazem<br>a diferença.</h2>
+      </div>
+      <div class="intro__side">
+        <p class="muted">Cada projeto começa com uma boa conversa e termina com um móvel pensado para durar e fazer parte da sua história.</p>
+        <a class="link-arrow" href="#projetos">Explore os projetos ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects" id="projetos" aria-label="Projetos">
+    <div class="wrap">
+      <div class="projects__list">
+
+        <a class="project" href="orcamento.html?tipo=cozinha" style="--tone:#E0D7C9">
+          <svg class="project__art" viewBox="0 0 350 245" aria-hidden="true">
+            <rect width="350" height="245" fill="#B8A38B"/>
+            <rect x="20" y="20" width="150" height="205" fill="#E8DFD2"/>
+            <rect x="178" y="20" width="152" height="205" fill="#8F6749"/>
+            <rect x="178" y="20" width="152" height="205" fill="url(#grain)"/>
+            <rect x="20" y="192" width="310" height="33" fill="#24251F"/>
+            <rect x="36" y="206" width="278" height="8" fill="#D4B18A"/>
+          </svg>
+          <p class="project__name">Cozinhas sob medida</p>
+        </a>
+
+        <a class="project" href="orcamento.html?tipo=painel" style="--tone:#D8D0C2">
+          <svg class="project__art" viewBox="0 0 350 245" aria-hidden="true">
+            <rect width="350" height="245" fill="#B6A28B"/>
+            <rect x="20" y="20" width="310" height="68" fill="#E9E0D4"/>
+            <rect x="20" y="98" width="148" height="127" fill="#8C6547"/>
+            <rect x="178" y="98" width="152" height="127" fill="#C4AD91"/>
+            <path d="M34 36 H316 M34 54 H316 M34 72 H316" stroke="#9C8A75" stroke-width="2"/>
+            <rect x="20" y="225" width="310" height="20" fill="#24251F"/>
+          </svg>
+          <p class="project__name">Painéis e salas</p>
+        </a>
+
+        <a class="project" href="orcamento.html?tipo=guarda-roupa" style="--tone:#E1D8CA">
+          <svg class="project__art" viewBox="0 0 350 245" aria-hidden="true">
+            <rect width="350" height="245" fill="#BDAA92"/>
+            <rect x="20" y="20" width="310" height="205" fill="#D8C9B4"/>
+            <rect x="20" y="20" width="310" height="60" fill="#A47A54"/>
+            <rect x="20" y="20" width="310" height="60" fill="url(#grain)"/>
+            <rect x="20" y="90" width="310" height="135" fill="#E7DDCF"/>
+            <rect x="20" y="202" width="310" height="23" fill="#24251F"/>
+            <rect x="40" y="225" width="270" height="20" fill="#6D4B32"/>
+          </svg>
+          <p class="project__name">Quartos e closets</p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="quote section" id="orcamento" aria-labelledby="quote-title">
+    <div class="wrap quote__grid">
+      <div>
+        <p class="eyebrow">Seu projeto começa aqui</p>
+        <h2 class="h2 quote__title" id="quote-title">Uma ideia na cabeça?<br>Vamos dar forma a ela.</h2>
+        <p class="muted quote__text">Faça uma simulação inicial e tenha uma referência de investimento.</p>
+        <p class="muted quote__text">O orçamento final é confirmado após avaliação do projeto.</p>
+        <a class="btn btn--dark btn--lg quote__cta" href="orcamento.html">Simular orçamento ↗</a>
+      </div>
+
+      <form class="sim" action="orcamento.html" method="get" aria-labelledby="sim-title">
+        <p class="eyebrow">Simulação rápida</p>
+        <h3 class="h3 sim__title" id="sim-title">Calcule uma estimativa</h3>
+        <div class="sim__fields">
+          <div class="field">
+            <label class="field__sub" for="sim-tipo">Tipo de móvel</label>
+            <select class="select" id="sim-tipo" name="tipo">
+              <option value="">Selecione uma opção</option>
+              <option value="cozinha">Cozinha</option>
+              <option value="painel">Painel de TV e sala</option>
+              <option value="guarda-roupa">Guarda-roupa</option>
+              <option value="closet">Closet</option>
+              <option value="escritorio">Escritório</option>
+            </select>
+          </div>
+          <div class="sim__row">
+            <div class="field">
+              <label class="field__sub" for="sim-largura">Largura (m)</label>
+              <input class="input" id="sim-largura" name="largura" type="text" inputmode="decimal" autocomplete="off" placeholder="Ex.: 2,00">
+            </div>
+            <div class="field">
+              <label class="field__sub" for="sim-altura">Altura (m)</label>
+              <input class="input" id="sim-altura" name="altura" type="text" inputmode="decimal" autocomplete="off" placeholder="Ex.: 2,40">
+            </div>
+          </div>
+        </div>
+        <button class="sim__go" type="submit">Ver estimativa ↗</button>
+        <p class="sim__note">Estimativa orientativa • Não é orçamento final</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="brand brand--footer" href="index.html" aria-label="Paulo Móveis — página inicial">
+          <svg class="brand__mark" viewBox="0 0 46 46" aria-hidden="true">
+            <rect width="46" height="46" rx="2" fill="#D4B18A"/>
+            <path d="M11 34 V12 L23 23 L35 12 V34" fill="none" stroke="#24251F" stroke-width="2.5"/>
+          </svg>
+          <span>
+            <span class="brand__name">PAULO MÓVEIS</span>
+            <span class="brand__tag">Marcenaria sob medida</span>
+          </span>
+        </a>
+        <p class="footer__tagline">Móveis feitos com cuidado, pensados para o seu espaço.</p>
+        <p class="footer__place">Fortaleza dos Valos • Rio Grande do Sul</p>
+      </div>
+
+      <nav aria-label="Rodapé">
+        <p class="footer__col-title">Navegação</p>
+        <ul class="footer__list">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="orcamento.html">Calculadora</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <p class="footer__col-title">Contato</p>
+        <ul class="footer__list">
+          <!-- TODO: trocar "#" pelos links reais do WhatsApp e do Instagram -->
+          <li><a href="#">WhatsApp</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__bottom">© 2026 Paulo Móveis • Portfólio digital</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
