@@ -1,0 +1,58 @@
+/* Postagens dos trabalhos */
+.project-post {
+  width: min(100%, 1440px);
+  margin-inline: auto;
+  padding: 48px var(--gutter) 72px;
+}
+
+.project-post__header { max-width: 680px; margin-bottom: 28px; }
+.project-post__category {
+  color: var(--wood-deep);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.project-post__title {
+  margin-top: 10px;
+  font: normal clamp(2rem, 3vw, 3rem)/1.15 var(--serif);
+}
+.project-post__description { margin-top: 12px; color: var(--muted); }
+
+.project-post__gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.project-post__photo {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  background: var(--sand);
+  aspect-ratio: 1;
+}
+.project-post__photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.project-post__photo img[src=""] { visibility: hidden; }
+
+@media (min-width: 720px) {
+  .project-post__gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: 0 0 repeat(2, minmax(0, 1fr));
+  }
+  .project-post__photo { aspect-ratio: auto; }
+  .two { grid-column: 2 / 3; grid-row: 3 / 4; }
+  .three { grid-column: 1; grid-row: 3 / 5; }
+  .four { grid-column: 3; grid-row: 3; }
+  .five { grid-column: 2; grid-row: 4; }
+  .six { grid-column: 3; grid-row: 4; }
+  .two, .four, .five, .six { aspect-ratio: 1; }
+}
+
+@media (max-width: 479px) {
+  .project-post__gallery { grid-template-columns: 1fr; }
+}
