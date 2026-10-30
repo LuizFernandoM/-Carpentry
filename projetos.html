@@ -30,12 +30,12 @@
 
     <nav class="nav" id="menu" aria-label="Principal">
       <ul class="nav__list">
-        <li><a class="nav__link" href="index.html" aria-current="page">Início</a></li>
-        <li><a class="nav__link" href="#projetos">Projetos</a></li>
-        <li><a class="nav__link" href="#sobre">Sobre nós</a></li>
+        <li><a class="nav__link" href="index.html">Início</a></li>
+        <li><a class="nav__link" href="projetos.html" aria-current="page">Projetos</a></li>
+        <li><a class="nav__link" href="index.html#sobre">Sobre nós</a></li>
         <li><a class="nav__link" href="orcamento.html">Orçamento</a></li>
       </ul>
-      <a class="btn btn--dark nav__cta" href="#orcamento">Fale conosco ↗</a>
+      <a class="btn btn--dark nav__cta" href="index.html#orcamento">Fale conosco ↗</a>
     </nav>
   </div>
 </header>
@@ -43,10 +43,11 @@
 
 
 <main id="projetos">
-  <article class="project-post">
+  <section class="project-post project-post--dark" aria-labelledby="projeto-cozinha">
+    <div class="project-post__inner">
     <header class="project-post__header">
       <span class="project-post__category">cozinha</span>
-      <h1 class="project-post__title">Cozinha</h1>
+      <h1 class="project-post__title" id="projeto-cozinha">Cozinha</h1>
       <p class="project-post__description">Imagens de referência para demonstrar a galeria. As fotos mostram cozinhas de projetos diferentes e serão substituídas por trabalhos da Paulo Móveis.</p>
     </header>
 
@@ -58,10 +59,14 @@
       <figure class="project-post__photo five"><img src="assets/img/cozinha-exemplo-4.jpg" alt="Cozinha ampla com armários de madeira e luminárias pendentes"></figure>
       <figure class="project-post__photo six"><img src="assets/img/cozinha-exemplo-5.jpg" alt="Cozinha com armários de madeira, ilha e eletrodomésticos modernos"></figure>
     </div>
+    </div>
+  </section>
 
+  <section class="project-post" aria-labelledby="projeto-quarto">
+    <div class="project-post__inner">
     <header class="project-post__header">
       <span class="project-post__category">quarto</span>
-      <h1 class="project-post__title">quarto</h1>
+      <h2 class="project-post__title" id="projeto-quarto">quarto</h2>
       <p class="project-post__description">Conte aqui os detalhes do projeto, os materiais utilizados e o que o torna especial.</p>
     </header>
 
@@ -73,8 +78,18 @@
       <figure class="project-post__photo five"><img src="" alt="Quarta foto do projeto"></figure>
       <figure class="project-post__photo six"><img src="" alt="Quinta foto do projeto"></figure>
     </div>
-  </article>
+    </div>
+  </section>
 </main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="footer__bottom" style="border:0;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between">
+      <span><strong style="color:#fff">PAULO MÓVEIS</strong><br>Fortaleza dos Valos • Rio Grande do Sul</span>
+      <span>© 2026 • Portfólio digital</span>
+    </p>
+  </div>
+</footer>
 
 <script src="script.js" defer></script>
 

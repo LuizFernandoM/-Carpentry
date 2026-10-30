@@ -1,23 +1,67 @@
-/* Postagens dos trabalhos */
+/* Postagens dos trabalhos — usa os tokens definidos em styles.css */
+
+/* Cada projeto é uma faixa; elas alternam entre escuro (como o hero) e claro. */
 .project-post {
-  width: min(100%, 1440px);
+  width: 100%;
+  padding-block: 56px 72px;
+  background: var(--cream);
+  color: var(--ink);
+}
+.project-post__inner {
+  width: 100%;
+  max-width: 1440px;
   margin-inline: auto;
-  padding: 48px var(--gutter) 72px;
+  padding-inline: var(--gutter);
+}
+.project-post + .project-post { border-top: 1px solid var(--line); }
+
+.project-post--dark {
+  color: var(--on-dark);
+  border-top: 0;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Cpath d='M0 18 C20 10 45 26 90 14 M0 47 C24 35 54 57 90 42 M0 76 C25 68 53 84 90 72' fill='none' stroke='%23fff' stroke-opacity='.1' stroke-width='2'/%3E%3C/svg%3E"),
+    linear-gradient(135deg, #24251F, #414237);
 }
 
-.project-post__header { max-width: 680px; margin-bottom: 28px; }
+/* ---------- cabeçalho de cada projeto ---------- */
+
+.project-post__header { max-width: 680px; margin-bottom: 32px; }
+
 .project-post__category {
-  color: var(--wood-deep);
-  font-size: 12px;
+  display: block;
+  font-size: 13px;
   font-weight: bold;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   text-transform: uppercase;
+  color: var(--wood-deep);
 }
+.project-post--dark .project-post__category { color: var(--wood-light); }
+
 .project-post__title {
-  margin-top: 10px;
-  font: normal clamp(2rem, 3vw, 3rem)/1.15 var(--serif);
+  margin-top: 18px;
+  font-family: var(--serif);
+  font-weight: normal;
+  font-size: clamp(2.1rem, 1.2rem + 2.4vw, 2.7rem);
+  line-height: 1.15;
+  text-transform: capitalize;
+  color: var(--ink);
 }
-.project-post__description { margin-top: 12px; color: var(--muted); }
+.project-post--dark .project-post__title { color: var(--white); }
+
+/* filete de madeira abaixo do título, como no hero */
+.project-post__title::after {
+  content: "";
+  display: block;
+  width: 75px;
+  height: 3px;
+  margin-top: 22px;
+  background: var(--wood);
+}
+
+.project-post__description { margin-top: 20px; max-width: 34em; color: var(--muted); }
+.project-post--dark .project-post__description { color: var(--on-dark); }
+
+/* ---------- galeria ---------- */
 
 .project-post__gallery {
   display: grid;
@@ -25,24 +69,49 @@
   gap: 16px;
 }
 .project-post__photo {
+  position: relative;
   min-width: 0;
   margin: 0;
   overflow: hidden;
   background: var(--sand);
   aspect-ratio: 1;
+  border-radius: var(--radius);
 }
+.project-post--dark .project-post__photo { background: var(--ink-soft); }
+
 .project-post__photo img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform .4s ease;
 }
+.project-post__photo:hover img { transform: scale(1.03); }
 .project-post__photo img[src=""] { visibility: hidden; }
 
+/* espaço reservado (foto ainda não enviada): veio da madeira suave */
+.project-post__photo:has(img[src=""]) {
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Cpath d='M0 18 C20 10 45 26 90 14 M0 47 C24 35 54 57 90 42 M0 76 C25 68 53 84 90 72' fill='none' stroke='%23C99A6B' stroke-opacity='.35' stroke-width='2'/%3E%3C/svg%3E"),
+    var(--sand);
+}
+.project-post--dark .project-post__photo:has(img[src=""]) {
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Cpath d='M0 18 C20 10 45 26 90 14 M0 47 C24 35 54 57 90 42 M0 76 C25 68 53 84 90 72' fill='none' stroke='%23D4B18A' stroke-opacity='.18' stroke-width='2'/%3E%3C/svg%3E"),
+    var(--ink-soft);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-post__photo img { transition: none; }
+  .project-post__photo:hover img { transform: none; }
+}
+
 @media (min-width: 720px) {
+  .project-post { padding-block: 70px 88px; }
   .project-post__gallery {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-template-rows: 0 0 repeat(2, minmax(0, 1fr));
+    gap: 21px;
   }
   .project-post__photo { aspect-ratio: auto; }
   .two { grid-column: 2 / 3; grid-row: 3 / 4; }
